@@ -1,0 +1,44 @@
+.card
+{
+    height : 50vh;
+    background-color: rgba(114, 114, 114, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.557);
+    box-sizing: border-box;
+    display : flex;
+    flex-direction: column;
+    gap : 0%;
+    justify-content: flex-start;
+}
+
+.card:hover
+{
+    transform: translateY(-10px);
+}
+.card  h2,p
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    color : white;
+    text-decoration: none;
+    font-family: C;
+    font-size: 0.8em;
+    word-wrap: break-word;
+}
+.card h2
+{
+    font-size: 0.9em;
+}
+.card-link
+{
+    text-decoration: none;
+}
+.Product-card-image
+{
+    height : 15vw;
+    width : 15vw;
+    object-fit: cover;
+}
+.card-info
+{
+    height : 40%;
+}

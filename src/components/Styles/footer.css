@@ -1,0 +1,308 @@
+.footer
+{
+    height : 70vh;
+    width : 100vw;
+    background-color: black;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.523);
+}
+
+.footer-links
+{
+    height : 18vh;
+    width : 90vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.links-section
+{
+    height : 80%;
+    width : 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-title
+{
+    width : 100%;
+    height : 100%;
+    background-color: black;
+    display : flex;
+    flex-direction: column;
+    gap : 1rem;
+}
+
+.location-container
+{
+    display : flex;
+    flex-direction: column;
+    height : 20vh;
+}
+.location-search-container
+{
+    width : 100%;
+    height : 100%;
+    border: 2px solid white;
+    display : flex;
+    align-items: center;
+
+}
+
+.location-search-container > a
+{
+    height : 80%;
+    width : 38.5%;
+}
+
+.location-search-container > input
+{
+    height : 100%;
+    width : 60%;
+    background-color: black;
+    border : none;
+    padding-left: 3%;
+}
+.location-search-container > input::placeholder
+{
+    color : white;
+    font-size: 1.1rem;;
+}
+
+.location-search-button
+{
+    height : 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    border : none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.location-search-button:hover
+{
+    opacity : 0.7;
+}
+
+.link-title > ul
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.links-in-footer
+{
+    line-height: 1.5;
+    font-size : 1.2rem;
+    text-decoration: none;
+    color : white;
+}
+
+.links-in-footer:hover
+{
+    opacity : 0.5;
+}
+
+.link-title > h2
+{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer-mid-section
+{
+    height : 18vh;
+    width : 90vw;
+    display : flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.country-tag-container
+{
+    height : 70%;
+    width : 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.country-tag-container > a
+{
+    height : 4vh;
+    width : 15%;
+}
+
+.country-tag-button
+{
+    background-color: white;
+    color : black;
+    height : 100%;
+    width : 100%;
+    font-size: 1rem;
+    font-weight: 800;
+    border : none;
+}
+
+.country-tag-button:hover
+{
+    opacity : 0.5;
+}
+
+.media-handles
+{
+    height : 70%;
+    width : 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.media-links
+{
+    width : 100%;
+    background-color: black;
+    display : flex;
+    justify-content: space-between;
+}
+.media-link-container
+{
+    height : 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.other-links
+{
+    width : 100%;
+    text-decoration: none;
+    color : white;
+    font-size: 13px;
+    font-family :Arial, Helvetica, sans-serif;
+    word-wrap: break;
+}
+.other-links:hover
+{
+    opacity : 0.5;
+}
+.media-icons
+{
+    width : 30%;
+    height : 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.media-icon-container
+{
+    height : 100%;
+    width : 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+.media-icon-container > a
+{
+    width : 100%;
+    display : flex;
+    justify-content: flex-end;
+}
+.media-icon
+{
+    height : 100%;
+    width : auto;
+}
+.media-icon:hover
+{
+    opacity: 0.5;
+}
+.copyrights
+{
+    height : 18vh;
+    width : 90vw;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+.copyrights-container
+{
+    height : 100%;
+    width : 95%;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyrights-box
+{
+    height : 30%;
+    width : 40%;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.upper-box
+{
+    height : 60%;
+    width : 100%;
+    display : flex;
+    align-items: center;
+    gap : 4%;
+}
+
+.copyright-text
+{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.copyright-text:hover
+{
+    opacity : 0.5;
+}
+
+.lower-box > a
+{
+    font-size : 0.8rem;
+    color : grey;
+    text-decoration: none;
+}
+
+.lower-box > a:hover
+{
+    opacity : 0.5;
+}
+
+.portal-button-container
+{
+    height : 20%;
+    width : 10%;
+    background-color: white;
+}
+
+.portal-button
+{
+    height : 100%;
+    width : 100%;
+    border : none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3.5%;
+    background-color: white;
+}
+
+.portal-button:hover
+{
+    background-color: black;
+    color :white;
+}

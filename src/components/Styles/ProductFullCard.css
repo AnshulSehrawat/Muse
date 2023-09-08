@@ -1,0 +1,15 @@
+.BigCard
+{
+    position : absolute;
+    height : 8vh;
+    width: 100vw;
+    background-color: darkred;
+    z-index: 1;
+}
+
+.BigCard > h1
+{
+    color : white;
+    background-color: black;
+    font-size: 2rem;
+}

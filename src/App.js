@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import {Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home.jsx'
+import About from './Pages/About.jsx'
+import Contacts from './Pages/Contacts.jsx'
+import Products from './Pages/Products.jsx'
+import Footer from './components/Footer';
+import ProductFullCard from './components/ProductFullcard';
+import SignUpIn from './components/SignUpIn.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <Header/>
+      <Routes>
+        <Route index element = {<Home/>}></Route>
+        <Route exact path='/Home' element = {<Home/>}></Route>
+        <Route exact path='/About' element = {<About/>}></Route>
+        <Route exact path='/Contacts' element = {<Contacts/>}></Route>
+        <Route exact path='/Products' element = {<Products/>}></Route>
+        <Route exact path='/Products:id' element = {<ProductFullCard/>}></Route>
+        <Route exact path='/Sign-up-in' element = {<SignUpIn/>}></Route>
+      </Routes>
+      <Footer/>
+  </>
   );
 }
 
