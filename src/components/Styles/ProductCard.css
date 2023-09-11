@@ -1,14 +1,11 @@
 .Product-card
 {
-    height : 55vh;
+    padding-top: 2%;
+    width : 100%;
     display: flex;
-    overflow-x: auto;
-    gap : 1.5vw;
-    width : 90%;
-}
-
-.Product-card::-webkit-scrollbar{
-    display : none;
+    overflow-x: hidden;
+    gap : 2vw;
+    scroll-behavior: smooth;
 }
 
 .Product-card-title
@@ -16,5 +13,32 @@
     color : white;
     font-family: R;
     align-self: flex-start;
-    padding-left: 5%;
+}
+
+.prebtn, .nextbtn
+{
+    padding : 1vmax;
+    position : absolute;
+    height : 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}  
+.prebtn > img, .nextbtn > img
+{
+    height: 2vmax;
+    opacity: 0.5;
+} 
+.prebtn
+{
+    left : 1%;
+}
+
+.nextbtn
+{
+    right : 1%;
+}
+.nextbtn > img
+{
+    rotate: 180deg;
 }

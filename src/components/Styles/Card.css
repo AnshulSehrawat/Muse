@@ -1,18 +1,21 @@
 .card
 {
-    height : 50vh;
-    background-color: rgba(114, 114, 114, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.557);
+    width : 15vw;
+    /* background-color: rgba(114, 114, 114, 0.4); */
+    /* border: 1px solid rgba(255, 255, 255, 0.557); */
     box-sizing: border-box;
     display : flex;
     flex-direction: column;
     gap : 0%;
     justify-content: flex-start;
+    opacity: 0.7;
 }
 
 .card:hover
 {
     transform: translateY(-10px);
+    scale : 1.05;
+    opacity: 1;
 }
 .card  h2,p
 {
@@ -35,7 +38,7 @@
 .Product-card-image
 {
     height : 15vw;
-    width : 15vw;
+    width : 100%;
     object-fit: cover;
 }
 .card-info

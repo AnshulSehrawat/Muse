@@ -1,6 +1,5 @@
 .Main-container
 {
-    min-height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -8,7 +7,6 @@
 }
 .product-card-container
 {
-    min-height : 90vh;
     width: 90%;
     display : flex;
     flex-direction: column;

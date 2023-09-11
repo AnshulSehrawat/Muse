@@ -1,11 +1,10 @@
 import React from 'react'
+import ProductsContent from '../components/ProductsContent.jsx'
 
 function Products() {
   return (
     <div>
-      <h1>
-        This is Products page
-      </h1>
+      <ProductsContent/>
     </div>
   )
 }
