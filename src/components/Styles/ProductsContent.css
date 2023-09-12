@@ -5,3 +5,24 @@
     justify-content: flex-start;
     gap : 5vmax;
 }
+
+.carousel-container
+{
+    margin-bottom: 3vmax;
+}
+.ProductMenuContainer{
+    position: relative;
+    z-index: 10;
+}
+.ProductMenuContainer > a:hover
+{
+    scale : 1.05;
+    transform: translate(-10px);
+    transition: 0.3s;
+}
+.ProductMenuContainer > a:not(:hover)
+{
+    scale : 1;
+    transform: translate(10px);
+    transition: 0.3s;
+}

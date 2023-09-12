@@ -32,7 +32,7 @@
 .banner-text-container:hover
 {
     border: 1px solid rgba(255, 255, 255, 0.502); 
-    transition-delay: 150ms;
+    transition: 0.5s;
 }
 .banner-text-container > h1
 {
@@ -66,7 +66,7 @@
 {
     background-color: rgba(255, 255, 255);
     color : rgb(45, 45, 45);
-    transition-delay: 150ms;
+    transition: .5s;
 }
 .s-b-c
 {

@@ -4,6 +4,7 @@
     width : 100%;
     display: flex;
     overflow-x: hidden;
+    overflow-y: hidden;
     gap : 2vw;
     scroll-behavior: smooth;
 }

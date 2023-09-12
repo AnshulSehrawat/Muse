@@ -16,8 +16,8 @@ function Header() {
           </div>
           <div className="links-container">
             <Link className="Link" to="../">Home</Link>
-            <Link className="Link" to="../About">About</Link>
             <Link className="Link" to="../Products">Products</Link>
+            <Link className="Link" to="../About">About</Link>
             <Link className="Link" to="../Contacts">Contacts</Link>
           </div>
           <div className="search-panel-container">

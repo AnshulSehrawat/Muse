@@ -78,9 +78,14 @@
 {
     border-bottom: 3px solid darkgrey;
     color : darkgrey;
-    transition-delay: 150ms;
+    transition: 0.5s;
 }
-
+.Link:not(:hover)
+{
+    border : none;
+    color : white;
+    transition: 0.5s;
+}
 .search-panel-container
 {
     display :flex;
