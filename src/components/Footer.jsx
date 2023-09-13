@@ -34,7 +34,7 @@ function NewFooter() {
           <h3>Useful links</h3>
           <a href="./About">About Muse</a>
           <a href="">Help and support</a>
-          <a href="">FAQ's</a>
+          <a href="./Contacts">Contact us</a>
           <a href="">Privacy policy</a>
         </div>
         <div className="footer-section">

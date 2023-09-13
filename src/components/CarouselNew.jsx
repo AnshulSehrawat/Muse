@@ -26,12 +26,12 @@ function CarouselNew() {
     <div className="CarouselContainer">
       <button className='prebtn carouselbtn' onClick={CarouselLeft}><img src={ButtonArrow} alt="" /></button>
       <button className='nextbtn carouselbtn' onClick={CarouselRight}><img src={ButtonArrow} alt="" /></button>
-      <CarouselCardNew img = {Carousel1} />
-      <CarouselCardNew img = {Carousel2}/>
-      <CarouselCardNew img = {Carousel3}/>
-      <CarouselCardNew img = {Carousel4}/>
-      <CarouselCardNew img = {Carousel5}/>
-      <CarouselCardNew img = {Carousel6}/>
+      <CarouselCardNew/>
+      <CarouselCardNew/>
+      <CarouselCardNew/>
+      <CarouselCardNew/>
+      <CarouselCardNew/>
+      <CarouselCardNew/>
     </div>
     </>
   )

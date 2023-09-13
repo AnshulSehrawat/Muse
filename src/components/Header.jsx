@@ -1,12 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Styles/Header.css';
 import { Link } from "react-router-dom";
 import search from '../Assets/images/search.svg';
 import myProfile from '../Assets/images/my-profile.svg'
 import logo from '../Assets/images/main-logo.png'
+import UserDropDown from './UserDropDown.jsx'
 
 function Header() {
-
+  const[usrBtnClicked, setUsrBtnClicked] = useState(false);
+  function Userbtnclick()
+  {
+    setUsrBtnClicked(!usrBtnClicked);
+  }
   return (
     <>
       <div className='Header-outer-container'>
@@ -23,12 +28,13 @@ function Header() {
           <div className="search-panel-container">
             <input type="text" placeholder='Search..' />
             <button className='search-button'><img className="search-icon" src={search} alt="" /></button>
-            <Link to = "../Sign-up-in"><img className = 'myProfile' src={myProfile} alt="" /></Link>
+            <button class = 'User-section-btn' onClick={Userbtnclick}><img className = 'myProfile' src={myProfile} alt="" /></button>
           </div>
         </div>
         <div className='animate'></div>
       </div>
-      {/* <div className='blur-bg'></div> */}
+      {usrBtnClicked && <UserDropDown setUsrBtnClicked = {setUsrBtnClicked}/>}
+      <div className='blur-bg'></div>
     </>
   )
 }

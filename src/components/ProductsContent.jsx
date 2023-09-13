@@ -75,7 +75,9 @@ function ProductsContent() {
     </div>
     <div className = 'ProductsContentMain'>
       <FilterBar/>
+      <div className="Prouctlistcontainer">
       <ProductList/>
+      </div>
     </div>
     </>
   )

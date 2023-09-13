@@ -4,13 +4,13 @@
     width : 5vw;
     position: absolute;
     background: linear-gradient(-90deg,transparent, white);
-    animation-name : Header-animation;
+    animation-name : footer-animation;
     animation-timing-function: linear;
     animation-duration: 2s;
     animation-iteration-count: infinite; 
     color: white;
 }
-@keyframes Header-animation {
+@keyframes footer-animation {
     0%   {left:100vw;}
     100% {left: 0;}
 }

@@ -7,7 +7,9 @@ import Contacts from './Pages/Contacts.jsx'
 import Products from './Pages/Products.jsx'
 import Footer from './components/Footer';
 import ProductFullCard from './components/ProductFullcard';
-import SignUpIn from './components/SignUpIn.jsx';
+import UserDashboard from './Pages/UserDashboard';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route exact path='/Contacts' element = {<Contacts/>}></Route>
         <Route exact path='/Products' element = {<Products/>}></Route>
         <Route exact path='/Products:id' element = {<ProductFullCard/>}></Route>
-        <Route exact path='/Sign-up-in' element = {<SignUpIn/>}></Route>
+        <Route exact path='/UserDashboard' element = {<UserDashboard/>}></Route>
+        <Route exact path='/Login' element = {<Login/>}></Route>
+        <Route exact path='/Register' element = {<Register/>}></Route>
       </Routes>
       <Footer/>
   </>
