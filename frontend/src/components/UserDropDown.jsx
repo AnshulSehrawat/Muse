@@ -15,8 +15,8 @@ function UserDropDown({setUsrBtnClicked}) {
     <>
     <div className='UserMenu'>
     <button onClick= {dropbtnclick}><Link className = "UserMenuLink" to = "../UserDashboard"><img src={DashboardIcon} alt="" />Dashboard</Link></button>
-    <button onclick = {dropbtnclick}><Link className = "UserMenuLink" to = "../Login"><img src={LogInIcon} alt="" />Login</Link></button>
-    <button onclick = {dropbtnclick}><Link className = "UserMenuLink" to = "../Register"><img src={RegisterIcon} alt="" />Register</Link></button>
+    <button onClick = {dropbtnclick}><Link className = "UserMenuLink" to = "../Login"><img src={LogInIcon} alt="" />Login</Link></button>
+    <button onClick = {dropbtnclick}><Link className = "UserMenuLink" to = "../Register"><img src={RegisterIcon} alt="" />Register</Link></button>
     </div>
     <div className="bg-blur"></div>
     </>

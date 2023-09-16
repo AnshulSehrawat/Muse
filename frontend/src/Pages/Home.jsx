@@ -6,13 +6,11 @@ import Carousel from '../components/CarouselNew.jsx'
 
 function Home() {
   return (
-    <div>
+    <>
     <MainBanner/>
     <ProductCatalog/>
-    <div className="HomeCarousel">
     <Carousel/>
-    </div>
-    </div>
+    </>
   )
 }
 

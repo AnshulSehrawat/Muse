@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import './Styles/CarouselNew.css'
 import CarouselCardNew from './CarouselCardNew.jsx'
 import Carousel1 from '../Assets/images/Carousel1.jpg'
@@ -10,28 +10,37 @@ import Carousel6 from '../Assets/images/Carousel6.jpg'
 import ButtonArrow from '../Assets/images/arrow-button.png'
 
 function CarouselNew() {
-  let box = document.querySelector('.CarouselContainer');
-  function CarouselLeft()
-  {
-    let width = box.clientWidth;
-    box.scrollLeft = box.scrollLeft - width;
+  const [box, setBox] = useState(null);
+
+  useEffect(() => {
+    const boxRef = document.querySelector('.CarouselContainer');
+    setBox(boxRef);
+  }, []);
+
+  function CarouselLeft() {
+    if (box) {
+      let width = box.clientWidth;
+      box.scrollLeft = box.scrollLeft - width;
+    }
   }
-  function CarouselRight()
-  {
-    let width = box.clientWidth;
-    box.scrollLeft = box.scrollLeft + width;
+
+  function CarouselRight() {
+    if (box) {
+      let width = box.clientWidth;
+      box.scrollLeft = box.scrollLeft + width;
+    }
   }
   return (
     <>
     <div className="CarouselContainer">
       <button className='prebtn carouselbtn' onClick={CarouselLeft}><img src={ButtonArrow} alt="" /></button>
       <button className='nextbtn carouselbtn' onClick={CarouselRight}><img src={ButtonArrow} alt="" /></button>
-      <CarouselCardNew/>
-      <CarouselCardNew/>
-      <CarouselCardNew/>
-      <CarouselCardNew/>
-      <CarouselCardNew/>
-      <CarouselCardNew/>
+      <CarouselCardNew image = {Carousel1}/>
+      <CarouselCardNew image = {Carousel2}/>
+      <CarouselCardNew image = {Carousel3}/>
+      <CarouselCardNew image = {Carousel4}/>
+      <CarouselCardNew image = {Carousel5}/>
+      <CarouselCardNew image = {Carousel6}/>
     </div>
     </>
   )

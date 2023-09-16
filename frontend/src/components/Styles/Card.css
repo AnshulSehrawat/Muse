@@ -53,3 +53,23 @@
 {
     height : 40%;
 }
+.card-info > div
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-info > h2
+{
+    padding-top: 0 ;
+    padding-bottom: 0;
+    padding-right: 3%;
+}
+.rating-container
+{
+    padding-left: 0.5vmax;
+}
+.rating-star-icon
+{
+    height : 1vmax;
+}

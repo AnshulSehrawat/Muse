@@ -1,0 +1,13 @@
+.order-card-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height : 70vh;
+    overflow-y: auto;
+    background-color: red;
+}
+.order-card-container::-webkit-scrollbar
+{
+    display : none;
+}

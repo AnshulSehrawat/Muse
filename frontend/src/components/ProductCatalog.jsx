@@ -48,14 +48,13 @@ function ProductCatalog() {
     }
     fetchData();
   }, []);
-
   return (
     <div className="Main-container">
       <div className="product-card-container">
         <ProductCard title={"Latest Products"} arr={allProducts} />
-        <ProductCard title={"Audio Products"} arr = {smartPhones}/>
-        <ProductCard title={"Laptops"} arr = {laptops}/>
+        <ProductCard title={"Audio Products"} arr = {allProducts}/>
         <ProductCard title={"Smartphones"} arr = {smartPhones}/>
+        <ProductCard title={"Laptops"} arr = {laptops}/>
       </div>
     </div>
   );

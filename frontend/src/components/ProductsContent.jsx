@@ -28,6 +28,8 @@ function AboutDropDown() {
 
 function ProductsContent() {
   const [aboutMenu, setAboutMenu] = useState(false);
+  const[filterCategory, setFilterCategory] = useState("none");
+
   const tempref = useRef(null);
   function AboutMenuDrop() {
     if (aboutMenu) {
@@ -49,6 +51,10 @@ function ProductsContent() {
       },
     });
   }, []);
+  function applycategory(category)
+  {
+    setFilterCategory(category);
+  }
   return (
     <>
     <div className="About-header">
@@ -74,9 +80,9 @@ function ProductsContent() {
     <Carousel/>
     </div>
     <div className = 'ProductsContentMain'>
-      <FilterBar/>
+      <FilterBar applycategory = {applycategory}/>
       <div className="Prouctlistcontainer">
-      <ProductList/>
+      <ProductList filterCategory = {filterCategory}/>
       </div>
     </div>
     </>
