@@ -10,6 +10,7 @@ import ProductDetails from './components/ProductDetails.jsx';
 import UserDashboard from './Pages/UserDashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import ChangePassword from './Pages/ChangePassword';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route exact path='/UserDashboard' element = {<UserDashboard/>}></Route>
         <Route exact path='/Login' element = {<Login/>}></Route>
         <Route exact path='/Register' element = {<Register/>}></Route>
+        <Route exact path='/ChangePassword' element = {<ChangePassword/>}></Route>
       </Routes>
       <Footer/>
   </>

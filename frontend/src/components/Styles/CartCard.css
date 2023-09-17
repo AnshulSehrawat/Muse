@@ -26,3 +26,17 @@
 {
     font-size: 1vmax;
 }
+.Cart-Card > div
+{
+    display: flex;
+    gap : 0.5vmax;
+}
+.Cart-Card > div > button
+{
+    height : 1vmax;
+    margin-top: 0.9vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}

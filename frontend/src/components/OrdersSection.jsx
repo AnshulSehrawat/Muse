@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Styles/OrdersSection.css';
-import CartCard from './CartCard.jsx'
+import OrderCard from './OrderCard';
 
 function CartSection() {
   const [orders, setOrders] = useState(null);
@@ -43,19 +43,17 @@ function CartSection() {
   }
   return (
     <>
-    <div className="Cart-section">
+    <div className="order-section">
       <h1>Your Orders ({userOrders.products.length} items)</h1>
-      <div className="cart-card-container">
-      <div className='Card-header'>
-        <h3 className='Item'>Item</h3>
-        <h3>Price</h3>
+      <div className="order-card-container">
+      <div className='order-card-header'>
+        <h3 className='order-Item'>Item</h3>
         <h3>Quantity</h3>
-        <h3>Total</h3>
-        <h3>Discounted Total</h3>
+        <h3>Price</h3>
       </div>
       {userOrders.products.map((item, id) => (
           <div key={id}>
-            <CartCard key={id} product = {item}/>
+            <OrderCard key={id} product = {item}/>
           </div>
         ))}
       </div>

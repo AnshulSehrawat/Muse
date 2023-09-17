@@ -21,7 +21,7 @@ function CarouselCardNew({image}) {
     <img className = 'CarouselBg'src={image} alt="" />
     <img className = 'CarouselImg' src={image} alt="" />
     <div  className='HeroProductCaption'>
-    <h2>Hero Product Description</h2>
+    <h2>Muse Headphones</h2>
     </div>
     </div>
   )

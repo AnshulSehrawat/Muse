@@ -48,6 +48,7 @@
     height: 17vh;
     width: 62vw;
     box-sizing: border-box;
+    padding : 2%;
 }
 .HeroProductCaption:hover
 {
