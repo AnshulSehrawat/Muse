@@ -9,22 +9,35 @@ function CartSection() {
   const UserId = 97; // Hardcoded userID to be received
 
   useEffect(() => {
-    const carturl = `https://dummyjson.com/carts`;
-
+    const carturl = `http://localhost:8000/carts`;
+  
     fetch(carturl)
       .then((response) => response.json())
       .then((jsonData) => {
-        setCart(jsonData.carts);
-        setUserCart(jsonData.carts.find((cart) => cart.userId === UserId));
-
-        if (userCart && userCart.totalProducts.length > 0) {
-          setIsEmpty(false);
+        console.log('API Response:', jsonData);
+  
+        if (Array.isArray(jsonData)) {
+          // Check if the response is an array
+          const foundUserCart = jsonData.find((cart) => cart.userId === UserId);
+  
+          if (foundUserCart) {
+            setCart(jsonData);
+            setUserCart(foundUserCart);
+  
+            if (foundUserCart.totalProducts.length > 0) {
+              setIsEmpty(false);
+            }
+          }
+        } else {
+          console.error('API response is not an array.');
         }
       })
       .catch((error) => {
         console.log("error: " + error);
       });
   }, [UserId]);
+  
+  
 
   if (cart === null) {
     return (
@@ -34,7 +47,7 @@ function CartSection() {
     );
   }
 
-  if (isEmpty) {
+  if (isEmpty || userCart === null) {
     return (
       <div className="Empty-cart-container">
         <h1>Your cart is empty.</h1>
@@ -56,13 +69,13 @@ function CartSection() {
       </div>
       {userCart.products.map((item, id) => (
           <div key={id}>
-            <CartCard key={id} product = {item}/>
+            <CartCard key={id} product={item} />
           </div>
         ))}
       </div>
     </div>
     <div className="cart-final-info">
-      <h2>Grand Total : {"\u20A8 " + userCart.discountedTotal}</h2>
+      <h2>Grand Total : {"\u20A8 " + userCart.totals.discountedTotal}</h2>
       <button>Checkout</button>
     </div>
     </>

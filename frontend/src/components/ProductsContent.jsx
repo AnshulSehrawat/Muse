@@ -6,7 +6,6 @@ import ProductList from './ProductList.jsx'
 import Carousel from './CarouselNew.jsx'
 import { Link } from 'react-router-dom'
 import downArrow from "../Assets/images/down-pointer.svg";
-import gsap from 'gsap';
 
 function AboutDropDown() {
   return (
@@ -38,19 +37,7 @@ function ProductsContent() {
       setAboutMenu(true);
     } 
   }
-  useEffect(() => {
-    const el = tempref.current;
-    gsap.from(el, {
-      y: "30%",
-      opacity: 0,
-      duration: 1,
-      ease: "ease-in",
-      scrollTrigger: {
-        trigger: el,
-        toggleActions: "restart none none none",
-      },
-    });
-  }, []);
+  
   function applycategory(category)
   {
     setFilterCategory(category);

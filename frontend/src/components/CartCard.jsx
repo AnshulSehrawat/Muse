@@ -9,8 +9,8 @@ function CartCard({product}) {
     const maxQuantity = 5; //Limit on quantity hardcoded
 
     useEffect(() => {
-        const producturl = `https://dummyjson.com/products/${product.id}`;
-    
+        const producturl = `http://localhost:8000/products/${product.id}`;
+        console.log(producturl);
         fetch(producturl)
           .then((response) => response.json())
           .then((jsonData) => {
