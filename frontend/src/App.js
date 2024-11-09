@@ -25,21 +25,28 @@ function App() {
 
   return (
     <>
-      <Header searchInputRef={searchInputRef} />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route exact path='/Home' element={<Home />} />
-        <Route exact path='/About' element={<About />} />
-        <Route exact path='/Contacts' element={<Contacts />} />
-        <Route exact path='/Products' element={<Products />} />
-        <Route exact path='/Products/:id' element={<ProductDetails />} />
-        <Route exact path='/search/:query' element={<SearchResults onRefocusSearch={focusSearchInput} />} />
-        <Route exact path='/UserDashboard' element={<UserDashboard />} />
-        <Route exact path='/Login' element={<Login />} />
-        <Route exact path='/Register' element={<Register />} />
-        <Route exact path='/ChangePassword' element={<ChangePassword />} />
-      </Routes>
-      <Footer />
+      <div className="mobile-message">
+        <h1>This website is best viewed on a Laptop or Desktop</h1>
+        <p>Please switch to a larger screen for the best experience.</p>
+      </div>
+
+      <div className="app-content">
+        <Header searchInputRef={searchInputRef} />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route exact path='/Home' element={<Home />} />
+          <Route exact path='/About' element={<About />} />
+          <Route exact path='/Contacts' element={<Contacts />} />
+          <Route exact path='/Products' element={<Products />} />
+          <Route exact path='/Products/:id' element={<ProductDetails />} />
+          <Route exact path='/search/:query' element={<SearchResults onRefocusSearch={focusSearchInput} />} />
+          <Route exact path='/UserDashboard' element={<UserDashboard />} />
+          <Route exact path='/Login' element={<Login />} />
+          <Route exact path='/Register' element={<Register />} />
+          <Route exact path='/ChangePassword' element={<ChangePassword />} />
+        </Routes>
+        <Footer />
+      </div>
     </>
   );
 }
