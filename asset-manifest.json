@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/muse/static/css/main.8de3b37d.css",
+    "main.js": "/muse/static/js/main.60a3830f.js",
+    "static/media/login-video.mp4": "/muse/static/media/login-video.22803a0c0504d5bfb066.mp4",
+    "static/media/user-image.png": "/muse/static/media/user-image.bbc4afc82d4ab67e89d3.png",
+    "static/media/CorporateData.jpeg": "/muse/static/media/CorporateData.ddf3136a97c5368cb453.jpeg",
+    "static/media/Carousel6.jpg": "/muse/static/media/Carousel6.5a57e8e1b47ac682f1d4.jpg",
+    "static/media/Ragara.otf": "/muse/static/media/Ragara.66dc0eedf33ae741c8ad.otf",
+    "static/media/History.jpg": "/muse/static/media/History.ea4187d0cc768f717ebb.jpg",
+    "static/media/initiative1.jpeg": "/muse/static/media/initiative1.4fd821a963f48f2cf44b.jpeg",
+    "static/media/Carousel3.webp": "/muse/static/media/Carousel3.ebbe691153294de03922.webp",
+    "static/media/CaviarDreams.ttf": "/muse/static/media/CaviarDreams.174b0a13f7e49c169450.ttf",
+    "static/media/wrongsearch.jpg": "/muse/static/media/wrongsearch.bfe77eb440454c921a45.jpg",
+    "static/media/initiative2.jpeg": "/muse/static/media/initiative2.c4bf0791324219faa40a.jpeg",
+    "static/media/Carousel1.jpg": "/muse/static/media/Carousel1.435f2e939547bc7e728f.jpg",
+    "static/media/AboutBannerImage.jpg": "/muse/static/media/AboutBannerImage.76a7b81b54c37112937d.jpg",
+    "static/media/Carosuel4.webp": "/muse/static/media/Carosuel4.62254559e83c1e2edd70.webp",
+    "static/media/Vogue.ttf": "/muse/static/media/Vogue.cc23cdc2582e9de16b77.ttf",
+    "static/media/glossy.otf": "/muse/static/media/glossy.9ab5fb247e3c1a0645f5.otf",
+    "static/media/main-logo.png": "/muse/static/media/main-logo.6d7de3e67671a53d6475.png",
+    "static/media/igicon.png": "/muse/static/media/igicon.a3a7519a1733b630f5b7.png",
+    "static/media/Carousel5.webp": "/muse/static/media/Carousel5.ffa8788b25d24eeee9d4.webp",
+    "static/media/yticon.png": "/muse/static/media/yticon.b0c5f43ef3b6834854e0.png",
+    "static/media/twicon.png": "/muse/static/media/twicon.d840813d86ac2ceb6ced.png",
+    "static/media/Carousel2.avif": "/muse/static/media/Carousel2.f54d13e3cdf680f1cb52.avif",
+    "static/media/CorporateReport.avif": "/muse/static/media/CorporateReport.bc83d799c7a3073edcbf.avif",
+    "static/media/my-profile.svg": "/muse/static/media/my-profile.fe8b016f103cb817650e4750053116c3.svg",
+    "static/media/search.svg": "/muse/static/media/search.ce60cd1ba511b0c7f3cf680069e6e5e4.svg",
+    "index.html": "/muse/index.html",
+    "static/media/down-pointer.svg": "/muse/static/media/down-pointer.544fb7b764d069ecac0f38c8048dfb26.svg",
+    "main.8de3b37d.css.map": "/muse/static/css/main.8de3b37d.css.map",
+    "main.60a3830f.js.map": "/muse/static/js/main.60a3830f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8de3b37d.css",
+    "static/js/main.60a3830f.js"
+  ]
+}
