@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import './Styles/CarouselCardNew.css'
 
 // let unsplash = 'https://api.unsplash.com/photos/random/?client_id=pnxXOL5Fe_G3mwgJ6SArvUFS-GeTP9WPiIgczJ6sT8I';
-function CarouselCardNew({image}) {
+function CarouselCardNew({image, Heading}) {
   // const[image, setImage] = useState();
   // fetch(unsplash)
   // .then(function(response)
@@ -21,7 +21,8 @@ function CarouselCardNew({image}) {
     <img className = 'CarouselBg'src={image} alt="" />
     <img className = 'CarouselImg' src={image} alt="" />
     <div  className='HeroProductCaption'>
-    <h2>Muse Headphones</h2>
+    <h2>{Heading}</h2>
+    <p>The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.</p>
     </div>
     </div>
   )

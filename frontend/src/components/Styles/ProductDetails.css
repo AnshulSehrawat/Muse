@@ -88,6 +88,27 @@
     align-items: center;
     gap: 2vmax;
 }
+.back-button
+{
+    width: min-content;
+    height: 5vh;
+    margin-top: 6%;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: sans-serif;
+    font-size: larger;
+    z-index: 5;
+}
+.back-button:hover
+{
+    scale : 1.1;
+    background-color: white;
+    color : black;
+    transition: 0.5s;
+    border: none;
+}
+
 .price-and-buttons > button
 {
     padding: 0vmax 1vmax;
@@ -111,11 +132,6 @@
     color: black;
     transition: 0.5;
     border: none;
-}
-.product-details > p
-{
-    padding:0;
-    padding-right: 4%;
 }
 .stock-info-container
 {

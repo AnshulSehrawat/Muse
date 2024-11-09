@@ -25,7 +25,11 @@
 .ProductListMain::-webkit-scrollbar{
     display : none;
 }
-
+.ProductListMain > p
+{
+    font-size: 2.5rem;
+    width: 50vw;
+}
 .ProductCardContainer:hover
 {
     opacity : 0.9;

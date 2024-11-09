@@ -22,10 +22,10 @@ function NewFooter() {
             <button><img src={Arrow} alt="" /></button>  
             </div>
             <div className="social-handles">
-              <a href=""><img src={twicon} alt="" /></a>
-              <a href=""><img src={yticon} alt="" /></a>
-              <a href=""><img src={igicon} alt="" /></a>
-              <a href=""><img src={fbicon} alt="" /></a>
+              <a href="/"><img src={twicon} alt="" /></a>
+              <a href="/"><img src={yticon} alt="" /></a>
+              <a href="/"><img src={igicon} alt="" /></a>
+              <a href="/"><img src={fbicon} alt="" /></a>
             </div>
             <h4>&copy; Copyright {currentYear} Muse. All rights reserved</h4>
           </div>
@@ -33,16 +33,16 @@ function NewFooter() {
         <div className="footer-section mid">
           <h3>Useful links</h3>
           <a href="./About">About Muse</a>
-          <a href="">Help and support</a>
+          <a href="./Contacts/">Help and support</a>
           <a href="./Contacts">Contact us</a>
-          <a href="">Privacy policy</a>
+          <a href="./About">Privacy policy</a>
         </div>
         <div className="footer-section">
         <h3>Products</h3>
-          <a href="">Audio</a>
-          <a href="">Laptops</a>
-          <a href="">Tablets</a>
-          <a href="">Others</a>
+          <a href="/">Audio</a>
+          <a href="/">Laptops</a>
+          <a href="/">Tablets</a>
+          <a href="/">Others</a>
         </div>
       </div>
     </div>

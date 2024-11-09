@@ -1,16 +1,15 @@
-import React from 'react'
-import './Styles/FilterBar.css'
-import {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
+import './Styles/FilterBar.css';
 import axios from 'axios';
-import UncheckedBox from '../Assets/images/unchecked-box.png'
-import CheckedBox from '../Assets/images/checked-box.png'
+import UncheckedBox from '../Assets/images/unchecked-box.png';
+import CheckedBox from '../Assets/images/checked-box.png';
 
 function FilterBar(props) {
   const [data, setData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("none");
 
   useEffect(() => {
-    axios.get('https://dummyjson.com/products/categories')
+    axios.get('https://dummyjson.com/products/category-list')
       .then(response => {
         setData(response.data);
       })
@@ -18,32 +17,31 @@ function FilterBar(props) {
         console.error('Error fetching data:', error);
       });
   }, []);
-  function clickhandle(category) {
-    console.log("CurrentSelectedCategory " + selectedCategory);
-    console.log("Current Category " + category);
-    if(selectedCategory === category)
-    {
-      setSelectedCategory("none");  
-    }
-    else
-    {
-      setSelectedCategory(category);
-    }
+
+  useEffect(() => {
+    console.log("Applying category filter:", selectedCategory);
+    props.applycategory(selectedCategory);
+  }, [selectedCategory, props]);
+
+  function clickhandle(categoryName) {
+    setSelectedCategory(prevCategory => 
+      prevCategory === categoryName ? "none" : categoryName
+    );
   }
-  props.applycategory(selectedCategory);
+
   return (
     <div className='FilterBarMain'>
-    <div className='Categoryheading'>Product Categories</div>
-    <div className='FilterBar'>
+      <div className='Categoryheading'>Product Categories</div>
+      <div className='FilterBar'>
         {data.map((category, index) => (
-          <button onClick={() => clickhandle(category)} key = {index}>
-          {selectedCategory === category ? (<img src={CheckedBox} alt="Checked" />) : (<img src={UncheckedBox} alt="Unchecked" />)}
-          <h3>{category}</h3>
+          <button onClick={() => clickhandle(category)} key={index} className='category-button'>
+            <img src={selectedCategory === category ? CheckedBox : UncheckedBox} alt={selectedCategory === category ? "Checked" : "Unchecked"} />
+            <h3>{category}</h3>
           </button>
         ))}
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default FilterBar
+export default FilterBar;

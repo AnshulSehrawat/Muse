@@ -1,0 +1,11 @@
+CarouselNew
+filterbar
+ProductCatalog
+ProductDetails
+ProductList
+OrderCard
+OrderSection
+CartCard
+cartSection
+Wishlist
+WishlistCard

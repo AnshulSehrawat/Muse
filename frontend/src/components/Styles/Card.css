@@ -9,10 +9,15 @@
     gap : 0%;
     justify-content: flex-start;
     opacity: 0.7;
+   
 }
 
 .card:hover
 {
+    border: 5px solid white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
     transform: translateY(-10px);
     scale : 1.05;
     opacity: 1;

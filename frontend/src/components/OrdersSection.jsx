@@ -2,27 +2,34 @@ import React, { useState, useEffect } from 'react';
 import './Styles/OrdersSection.css';
 import OrderCard from './OrderCard';
 
-function CartSection() {
+function OrdersSection() {
   const [orders, setOrders] = useState(null);
-  const [isEmpty, setIsEmpty] = useState(false);
   const [userOrders, setUserOrders] = useState(null);
-  const UserId = 26; // Hardcoded userID to be received
+  const UserId = 26;
 
   useEffect(() => {
-    const carturl = `https://dummyjson.com/carts`;
+    const carturl = `https://dummyjson.com/carts/1`;
 
     fetch(carturl)
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((jsonData) => {
-        setOrders(jsonData.carts);
-        setUserOrders(jsonData.carts.find((cart) => cart.userId === UserId));
+        console.log('Fetched data:', jsonData); 
 
-        if (userOrders && userOrders.totalProducts.length > 0) {
-          setIsEmpty(false);
+        if (jsonData.userId === UserId) {
+          setUserOrders(jsonData); 
+          setOrders(jsonData.products);
+        } else {
+          console.log(`No orders found for userId: ${UserId}`);
+          setUserOrders(null);
         }
       })
       .catch((error) => {
-        console.log("error: " + error);
+        console.error("Fetch error: ", error);
       });
   }, [UserId]);
 
@@ -34,32 +41,31 @@ function CartSection() {
     );
   }
 
-  if (isEmpty) {
+  if (!userOrders || !userOrders.products || userOrders.products.length === 0) {
     return (
       <div className="Empty-cart-container">
         <h1>No orders.</h1>
       </div>
     );
   }
+
   return (
-    <>
     <div className="order-section">
       <h1>Your Orders ({userOrders.products.length} items)</h1>
       <div className="order-card-container">
-      <div className='order-card-header'>
-        <h3 className='order-Item'>Item</h3>
-        <h3>Quantity</h3>
-        <h3>Price</h3>
-      </div>
-      {userOrders.products.map((item, id) => (
+        <div className='order-card-header'>
+          <h3 className='order-Item'>Item</h3>
+          <h3>Quantity</h3>
+          <h3>Price</h3>
+        </div>
+        {userOrders.products.map((item, id) => (
           <div key={id}>
-            <OrderCard key={id} product = {item}/>
+            <OrderCard product={item} />
           </div>
         ))}
       </div>
     </div>
-    </>
   );
 }
 
-export default CartSection;
+export default OrdersSection; 

@@ -1,6 +1,5 @@
 import React from "react";
 import "./Styles/LoginRegisterCard.css";
-import LoginVideo from "../Assets/videos/login-video.mp4";
 import LockIcon from "../Assets/images/lock-icon.png";
 import UserIcon from "../Assets/images/user-icon.png";
 
@@ -9,13 +8,7 @@ function LoginCard({ title }) {
   const isLoggingIn = title === "Log In";
   return (
     <div>
-      <video
-        className="Login-bg-video"
-        src={LoginVideo}
-        autoPlay
-        muted
-        loop
-      ></video>
+      
       <div className="Login-container">
         <div className="login-bg-blur"></div>
         <div className="Login-card">
@@ -42,7 +35,7 @@ function LoginCard({ title }) {
             <div className="Other-options">
               {!isRegistering && <a href="./Register">Dont't have a account?</a>}
               {isRegistering && <a href="./Login">Already have a account?</a>}
-              {!isRegistering && <a href="">Frogot password?</a>}
+              {!isRegistering && <a href="/ChangePassword">Frogot password?</a>}
             </div>
           </form>
         </div>

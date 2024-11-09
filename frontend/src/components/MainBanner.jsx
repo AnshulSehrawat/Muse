@@ -1,5 +1,5 @@
 import React from "react";
-import bannerVideo from "../Assets/videos/banner-video.mp4";
+// import bannerVideo from "../Assets/videos/banner-video.mp4";
 import "./Styles/MainBanner.css";
 import downArrow from "../Assets/images/down-arrow.png"
 
@@ -9,19 +9,16 @@ function MainBanner() {
       <div className="main-banner-container">
         <video
           className="main-banner-video"
-          src={bannerVideo}
+          src="https://videos.pexels.com/video-files/3196427/3196427-uhd_2560_1440_25fps.mp4"
           autoPlay
           loop
           muted
         ></video>
         <div className="banner-text-container">
           <h1>Unleash your creative muse</h1>
-          <h2>Powerful Wireless Headphone</h2>
+          <h2>Eclipse ProMax 360 Wireless Headphone</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            repellendus, non iure sed pariatur aliquam delectus, dolorum
-            exercitationem recusandae praesentium amet sunt alias accusamus
-            ullam incidunt, culpa aperiam? Tempore, cumque.
+          Introducing the Eclipse ProMax 360: these headphones blend luxury with performance. Featuring plush memory foam cushions and adaptive noise-canceling technology, they deliver crisp, immersive sound with deep bass. The sleek, lightweight design and intuitive touch controls ensure comfort and ease, making them perfect for any audio experience.
           </p>
           <button>Learn More</button>
         </div>

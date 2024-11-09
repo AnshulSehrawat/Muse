@@ -70,7 +70,7 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    font-size : 1.2rem;
+    font-size : 1.6rem;
     font-weight: 100;
 }
 
@@ -100,7 +100,11 @@
     border: none;
     border-bottom: 1px solid white;
     outline: none;
-    font-size : 1.1rem;
+    font-size : 1.6rem;
+}
+.search-panel-container > input:focus
+{
+    border: 1px solid rgba(255, 255, 255, 0.426);
 }
 .User-section-btn
 {
@@ -139,20 +143,8 @@
 
 .search-button:hover
 {
-    animation-name : search-hover;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-timing-function: ease;
     opacity: 1;
-}
-
-@keyframes search-hover {
-    0% {border: none}
-    20% {border: none; border-left: 1px solid white;}
-    40% {border: none; border-top: 1px solid white;}
-    60% {border: none; border-right: 1px solid white;}
-    80% {border: none; border-bottom: 1px solid white;}
-    100% {border: none}
+    border: 1px solid white;
 }
 
 .search-button > img

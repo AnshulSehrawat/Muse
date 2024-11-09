@@ -1,35 +1,46 @@
 import './App.css';
 import Header from './components/Header';
-import {Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home.jsx'
-import About from './Pages/About.jsx'
-import Contacts from './Pages/Contacts.jsx'
-import Products from './Pages/Products.jsx'
+import { useRef } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home.jsx';
+import About from './Pages/About.jsx';
+import Contacts from './Pages/Contacts.jsx';
+import Products from './Pages/Products.jsx';
 import Footer from './components/Footer';
 import ProductDetails from './components/ProductDetails.jsx';
 import UserDashboard from './Pages/UserDashboard';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import ChangePassword from './Pages/ChangePassword';
+import SearchResults from './Pages/SearchResults';
 
 function App() {
+  const searchInputRef = useRef(null);
+
+  const focusSearchInput = () => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  };
+
   return (
-   <>
-      <Header/>
+    <>
+      <Header searchInputRef={searchInputRef} />
       <Routes>
-        <Route index element = {<Home/>}></Route>
-        <Route exact path='/Home' element = {<Home/>}></Route>
-        <Route exact path='/About' element = {<About/>}></Route>
-        <Route exact path='/Contacts' element = {<Contacts/>}></Route>
-        <Route exact path='/Products' element = {<Products/>}></Route>
-        <Route exact path='/Products/:id' element = {<ProductDetails/>}></Route>
-        <Route exact path='/UserDashboard' element = {<UserDashboard/>}></Route>
-        <Route exact path='/Login' element = {<Login/>}></Route>
-        <Route exact path='/Register' element = {<Register/>}></Route>
-        <Route exact path='/ChangePassword' element = {<ChangePassword/>}></Route>
+        <Route index element={<Home />} />
+        <Route exact path='/Home' element={<Home />} />
+        <Route exact path='/About' element={<About />} />
+        <Route exact path='/Contacts' element={<Contacts />} />
+        <Route exact path='/Products' element={<Products />} />
+        <Route exact path='/Products/:id' element={<ProductDetails />} />
+        <Route exact path='/search/:query' element={<SearchResults onRefocusSearch={focusSearchInput} />} />
+        <Route exact path='/UserDashboard' element={<UserDashboard />} />
+        <Route exact path='/Login' element={<Login />} />
+        <Route exact path='/Register' element={<Register />} />
+        <Route exact path='/ChangePassword' element={<ChangePassword />} />
       </Routes>
-      <Footer/>
-  </>
+      <Footer />
+    </>
   );
 }
 

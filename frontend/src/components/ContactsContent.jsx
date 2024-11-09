@@ -10,7 +10,7 @@ function ContactsContent() {
       <ul>
         <li>
           <img src={Arrow} alt="" /><a href="">Electronics, Phones / Tablets / SmartWear, Games</a>
-          <p>TV, Video, Audio, Digital Still Camera, Xperia™, PlayStation®, and others.</p>
+          <p>TV, Video, Audio, Digital Still Camera, Gaming consoles, and others.</p>
         </li>
         <li>
         <img src={Arrow} alt="" /><a href="">Music</a>

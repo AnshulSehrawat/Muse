@@ -6,19 +6,30 @@ function Wishlist() {
   const [wishlist, setWishlist] = useState(null);
   const [isEmpty, setIsEmpty] = useState(false);
   const [userWishlist, setUserWishlist] = useState(null);
-  const UserId = 83; // Hardcoded userID to be received
+  const UserId = 83;
 
   useEffect(() => {
-    const wishlisturl = `https://dummyjson.com/carts`;
+    const wishlisturl = `https://localhost:8000/carts`;
 
     fetch(wishlisturl)
       .then((response) => response.json())
       .then((jsonData) => {
-        setWishlist(jsonData.wishlists);
-        setUserWishlist(jsonData.carts.find((wishlist) => wishlist.userId === UserId));
-
-        if (userWishlist && userWishlist.totalProducts.length > 0) {
-          setIsEmpty(false);
+        console.log('API Response:', jsonData);
+        if(Array.isArray(jsonData))
+        {
+          const foundUserWishlist = jsonData.find((cart) => cart.userId === UserId);
+          if(foundUserWishlist)
+          {
+            setWishlist(jsonData);
+            setUserWishlist(foundUserWishlist);
+            if(foundUserWishlist.totalProducts.length > 0)
+            {
+              setIsEmpty(false);
+            }
+          }
+        }else
+        {
+            console.error('APi response is not an array.');
         }
       })
       .catch((error) => {
@@ -34,7 +45,7 @@ function Wishlist() {
     );
   }
 
-  if (isEmpty) {
+  if (isEmpty || userWishlist === null) {
     return (
       <div className="Empty-wishlist-container">
         <h1>Your wishlist is empty.</h1>

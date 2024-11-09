@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Styles/ProductList.css";
-import { useState, useEffect } from "react";
 import Card from "./Card.jsx";
 import axios from "axios";
 
 async function fetchProductData() {
   try {
     const response = await axios.get(
-      "https://dummyjson.com/products?skip=0&limit=100"
+      "https://dummyjson.com/products?skip=0&limit=0"
     );
     return response.data.products;
   } catch (error) {
@@ -18,29 +17,31 @@ async function fetchProductData() {
 
 function ProductList({ filterCategory }) {
   const [ProductsData, setProductsData] = useState([]);
-  const noCategory = filterCategory === "none";
+
   useEffect(() => {
     async function fetchData() {
       const Products = await fetchProductData();
       setProductsData(Products);
+      console.log("Fetched Products Data:", Products);
     }
     fetchData();
   }, []);
-  const filteredData = ProductsData.filter(item => item.category === filterCategory);
+
+  const displayedProducts = filterCategory === "none"
+    ? ProductsData
+    : ProductsData.filter(item => item.category === filterCategory);
+
   return (
     <div className="ProductListMain">
-       {ProductsData.map((item) => (
-        noCategory && (
-          <div key={item.id} className='ProductCardContainer'>
+      {displayedProducts.length === 0 ? (
+        <p>Sorry No products found in this category.</p>
+      ) : (
+        displayedProducts.map((item) => (
+          <div key={item.id} className="ProductCardContainer">
             <Card product={item} />
           </div>
-        )
-      ))}
-      {filteredData.map((item) => (
-      !noCategory && (<div key={item.id} className='ProductCardContainer'>
-            <Card product={item} />
-          </div>)
-      ))}
+        ))
+      )}
     </div>
   );
 }
